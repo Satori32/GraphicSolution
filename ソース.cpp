@@ -6,6 +6,7 @@
 #include "Point2D.h"
 #include "Point3D.h"
 #include "Size3D.h"
+#include "Size2D.h"
 
 
 struct Space3D
