@@ -5,6 +5,7 @@
 #include "Surface24.h"
 #include "Point2D.h"
 #include "Point3D.h"
+#include "Size3D.h"
 
 
 struct Space3D
@@ -15,19 +16,20 @@ struct Space3D
 	Point3D<double> Light;
 	//Point3D<double> World;
 	Point3D<double> Look;
+	Size3D<double> Size;
 };
 
 Space3D ConstructSpace3D<Space3D>(size_t Width, size_t Height) {
 	Space3D S;
 	S.S24= ConstructSurface24( Width, Height);
 	S.ZBuffer = ConstructSurfaceT<double>(Width, Height);
-	Fill<double>(S.ZBuffer, INFINITY);
+	Fill<double>(S.ZBuffer, INFINITY);//i hate regstar clasher.
 
 	return S;
 }
 
 
-bool SetPixel(Space3D& In, Point3D<double> P, RGB C) {
+bool SetPixel(Space3D& In, Point3D<double> P, const RGB& C) {
 	if (Index(In.ZBuffer, P.X, P.Y) == NULL) { return false; }
 	if (Index(In.ZBuffer, P.X, P.Y) > P.Z) { return false; }
 	(*Index(In.S24, P.X, P.Y))=C;
@@ -35,7 +37,13 @@ bool SetPixel(Space3D& In, Point3D<double> P, RGB C) {
 	return true;
 
 }
+size_t Width(Space3D& In) {
+	return Width(In.S24);
+}
 
+size_t Height(Space3D& In) {
+	return Height(In.S24);
+}
 int main() {
 
 	return 0;

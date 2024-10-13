@@ -131,6 +131,7 @@
     <ClCompile Include="MemoryAllocator.cpp" />
     <ClCompile Include="Point2D.cpp" />
     <ClCompile Include="Point3D.cpp" />
+    <ClCompile Include="Size3D.cpp" />
     <ClCompile Include="Surface24.cpp" />
     <ClCompile Include="SurfaceT.cpp" />
     <ClCompile Include="ソース.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="MemoryAllocator.h" />
     <ClInclude Include="Point2D.h" />
     <ClInclude Include="Point3D.h" />
+    <ClInclude Include="Size3D.h" />
     <ClInclude Include="Surface24.h" />
     <ClInclude Include="SurfaceT.h" />
   </ItemGroup>
