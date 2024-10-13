@@ -28,6 +28,17 @@ Space3D ConstructSpace3D<Space3D>(size_t Width, size_t Height) {
 	return S;
 }
 
+bool Free(Space3D& In) {
+	Free(In.S24);
+	Free(In.ZBuffer);
+	ToZero<double>(In.Camera);
+	ToZero<double>(In.Light);
+	ToZero<double>(In.Look);
+	Resize(In.Size, 0, 0, 0);
+
+	return true;
+
+}
 
 bool SetPixel(Space3D& In, Point3D<double> P, const RGB& C) {
 	if (Index(In.ZBuffer, P.X, P.Y) == NULL) { return false; }
