@@ -132,6 +132,7 @@
     <ClCompile Include="Point2D.cpp" />
     <ClCompile Include="Point3D.cpp" />
     <ClCompile Include="Surface24.cpp" />
+    <ClCompile Include="SurfaceT.cpp" />
     <ClCompile Include="ソース.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +141,7 @@
     <ClInclude Include="Point2D.h" />
     <ClInclude Include="Point3D.h" />
     <ClInclude Include="Surface24.h" />
+    <ClInclude Include="SurfaceT.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
