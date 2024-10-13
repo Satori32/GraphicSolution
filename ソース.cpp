@@ -55,6 +55,10 @@ size_t Width(Space3D& In) {
 size_t Height(Space3D& In) {
 	return Height(In.S24);
 }
+
+bool SavePBM(Space3D& S,char* Name) {
+	return SavePBM(S.S24, Name);
+}
 int main() {
 
 	return 0;
