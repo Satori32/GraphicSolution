@@ -8,6 +8,7 @@
 #include "Size3D.h"
 #include "Size2D.h"
 #include "TimeTimer.h"
+#include "BigInt.h"
 
 
 struct Space3D
