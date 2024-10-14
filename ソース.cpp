@@ -7,6 +7,7 @@
 #include "Point3D.h"
 #include "Size3D.h"
 #include "Size2D.h"
+#include "TimeTimer.h"
 
 
 struct Space3D
@@ -18,6 +19,7 @@ struct Space3D
 	//Point3D<double> World;
 	Point3D<double> Look;
 	Size3D<double> Size;
+	TimeTimer Timer;
 };
 
 Space3D ConstructSpace3D<Space3D>(size_t Width, size_t Height) {
